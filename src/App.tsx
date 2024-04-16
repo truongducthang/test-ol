@@ -14,6 +14,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import { history } from 'utils/history';
+import GeoJSONComponent from 'features/map/GeoJSON';
 
 function App() {
   const isLoggedIn = useAppSelector(selectIsLoggedIn);
@@ -32,6 +33,14 @@ function App() {
                 <HomePage />
             }
           />
+
+<Route
+            path="/geo-json"
+            element={
+                <GeoJSONComponent />
+            }
+          />
+
           <Route
             path="/messages"
             element={
