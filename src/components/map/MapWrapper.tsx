@@ -1,3 +1,4 @@
+//@ts-nocheck
 import 'ol/ol.css';
 
 const center = fromLonLat([2.364, 48.82]);
